@@ -1,6 +1,7 @@
 import React from "react";
 import playstore from "../../images/playstore.png"
 import appstore from "../../images/appstore.png"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,11 +16,11 @@ const Footer = () => {
         </div>
         <div className="col">
           <h4>Links</h4>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Services</li>
-          <li>What's New</li>
-          <li>Blog</li>
+          <Link className="nav-link w-50" to='/'>Home</Link>
+          <Link className="nav-link w-50" to='/about'>About Us</Link>
+          <Link className="nav-link w-50" to='/services'>Services</Link>
+          <Link className="nav-link w-50" >What's New</Link>
+          <Link className="nav-link w-50" >Blog</Link>
         </div>
         <div className="col">
           <h4>Subscribe</h4>
@@ -37,7 +38,7 @@ const Footer = () => {
             Subscribe
           </button>
           <div className="row py-2">
-          <p>Get the app...</p>
+          <p className="font">Get the app...</p>
           <img src={playstore} alt="playstore" className="w-25 col" />
           <img src={appstore} alt="playstore" className="w-25 col" />
           </div>
